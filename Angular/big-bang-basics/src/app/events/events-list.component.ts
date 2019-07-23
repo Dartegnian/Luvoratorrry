@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'events-list',
-	template: `
-		<events-thumbnail (buttonClick)="buttonClickHandler($event)" [event]="event1"></events-thumbnail>
-	`
+	templateUrl: './events-list.component.html'
 })
 
 export class EventsListComponent {
@@ -16,10 +14,17 @@ export class EventsListComponent {
 		coordinates: {
 			latitude: "6969696",
 			longitude: "191919"
-		}
+    },
+    picture: "/assets/images/sticker (32).png",
+    speaker: "Menhera-chan",
+    booked: false
 	}
 
 	buttonClickHandler(data) {
 		console.log(data);
-	}
+  }
+
+  ParentPass(message) {
+    console.log('hello ', message);
+  }
 }

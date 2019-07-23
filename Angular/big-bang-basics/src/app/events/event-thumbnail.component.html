@@ -1,0 +1,25 @@
+<div class="well hoverwell thumbnail">
+  <h2>Event: {{event.name}}</h2>
+  <p>Date: {{event.date}}</p>
+  <p>Location: {{event.location}}</p>
+  <p>Latitude: {{event.coordinates.latitude}}</p>
+  <p>Longitude: {{event.coordinates.longitude}}</p>
+
+  <ng-container *ngIf="!event.booked; then notEventBooked; else eventBooked"></ng-container>
+  <div class="container">
+      <input (keyup.enter)="SubmitHandler(passwordField.value)" #passwordField class="pad-top" type="text"/>
+      <button #passwordSubmit (click)="SubmitHandler(passwordField.value)">Submit!</button>
+  </div>
+
+  <hr/>
+
+  <h2>Speaker: {{event.speaker}}</h2>
+  <img src={{event.picture}} height="500px"/>
+
+  <ng-template #notEventBooked>
+    <button class="not-booked btn-warning">Not booked</button>
+  </ng-template>
+  <ng-template #eventBooked>
+    <button class="booked btn-success">Booked!</button>
+  </ng-template>
+</div>
