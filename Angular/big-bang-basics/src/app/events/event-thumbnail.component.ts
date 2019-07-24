@@ -7,6 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styles: [`
     .pad-left { margin-left: 20px; }
     .pad-top {margin-top: 20px;}
+    .thumbnail {min-height: 680px}
   `]
 })
 
@@ -27,6 +28,14 @@ export class EventsThumbnailComponent {
   SubmitHandler(event: any) {
     this.passwordInfo.emit(event);
     console.log(event);
+  }
+
+  SetStyleFromTime() {
+    const isEarlyStart = this.event && this.event.time === '8:00 am';
+    return {
+      "text-uppercase": isEarlyStart,
+      "bold": isEarlyStart
+    }
   }
 
   logFoo() {

@@ -1,14 +1,15 @@
-<events-thumbnail (buttonClick)="buttonClickHandler($event)" (passwordInfo)="ParentPass($event)" #thumbnail [event]="event1"></events-thumbnail>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let event of events" class="col-md-5">
+        <events-thumbnail #thumbnail [event]="event">
+        </events-thumbnail>
+    </div>
+  </div>
 
 
-<h4>{{thumbnail.someProperty.title}}</h4>
-<button class="btn btn-primary" (click)="thumbnail.logFoo()">
-  <ng-container *ngIf="!thumbnail.event.booked; then thenTemplate; else elseTemplate"></ng-container>
-  <ng-template #thenTemplate>
-    Book me!
-  </ng-template>
-  <ng-template #elseTemplate>
-    Unbook :(
-  </ng-template>
-
-</button> <br/>
+<!--
+  <h4>{{thumbnail.someProperty.title}}</h4> -->
+</div>
+<!-- events-thumbnail
+(buttonClick)="buttonClickHandler($event)" (passwordInfo)="ParentPass($event)" #thumbnail [event]="event1"
+-->
