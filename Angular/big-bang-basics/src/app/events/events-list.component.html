@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div *ngFor="let event of events" class="col-md-5">
-        <events-thumbnail #thumbnail [event]="event">
+        <events-thumbnail #thumbnail (click)="showToast(event.name, event.booked)" [event]="event">
         </events-thumbnail>
     </div>
   </div>

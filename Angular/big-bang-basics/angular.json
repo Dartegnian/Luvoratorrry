@@ -28,10 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/toastr/build/toastr.min.css",
               "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [
+              "node_modules/toastr/build/toastr.min.js",
               "node_modules/jquery/dist/jquery.min.js"
             ]
           },
