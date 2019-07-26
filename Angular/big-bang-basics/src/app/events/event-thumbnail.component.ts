@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styles: [`
     .pad-left { margin-left: 20px; }
     .pad-top {margin-top: 20px;}
-    .thumbnail {min-height: 680px}
+    .thumbnail {min-height: 730px}
   `]
 })
 

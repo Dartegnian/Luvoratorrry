@@ -35,7 +35,7 @@
 
   <hr/>
 
-  <h2 *ngIf="event?.presenter">Presenter: {{event.presenter}}</h2>
+  <h4 *ngIf="event?.presenter">Presenter: <strong>{{event.presenter}}</strong></h4>
   <img [hidden]="!event?.picture" src={{event.picture}} height="500px"/>
 
   <button class="btn btn-primary" (click)="logFoo()">
