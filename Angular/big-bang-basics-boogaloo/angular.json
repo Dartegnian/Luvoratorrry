@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "big-bang-basics": {
+    "big-bang-basics-boogaloo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/big-bang-basics",
+            "outputPath": "dist/big-bang-basics-boogaloo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,14 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/toastr/build/toastr.min.css",
-              "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/toastr/build/toastr.min.js",
-              "node_modules/jquery/dist/jquery.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "big-bang-basics:build"
+            "browserTarget": "big-bang-basics-boogaloo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "big-bang-basics:build:production"
+              "browserTarget": "big-bang-basics-boogaloo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "big-bang-basics:build"
+            "browserTarget": "big-bang-basics-boogaloo:build"
           }
         },
         "test": {
@@ -115,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "big-bang-basics:serve"
+            "devServerTarget": "big-bang-basics-boogaloo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "big-bang-basics:serve:production"
+              "devServerTarget": "big-bang-basics-boogaloo:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "big-bang-basics"
+  "defaultProject": "big-bang-basics-boogaloo"
 }
