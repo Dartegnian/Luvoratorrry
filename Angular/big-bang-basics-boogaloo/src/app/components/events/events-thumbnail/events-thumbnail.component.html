@@ -1,0 +1,10 @@
+<div class="well hoverwell thumbnail">
+	<h3>{{ techEvents.name }}</h3>
+	<h4>Date: {{ techEvents.date }}</h4>
+	<h4>Time: {{ techEvents.time }}</h4>
+	<h4>Merch chair: \${{ techEvents.price }}</h4>
+	<div>
+		<h4>Location: {{ techEvents.location.address }}, {{ techEvents.location.city }}, {{ techEvents.location.country }}</h4>
+	</div>
+	<button class="btn btn-primary" (click)="BookingHandler()">Book me for this!</button>
+</div>
