@@ -11,6 +11,8 @@ export class EventsThumbnailComponent {
 	eventsBookingDetails: any;
 	famousLine = "It's everyday bro! x2";
 
+	variableDeezNuts = "Deez Nuts from child!";
+
 	BookingHandler() {
 		this.eventsBookingDetails = {
 			name: this.techEvents.name,
