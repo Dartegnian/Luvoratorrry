@@ -10,6 +10,7 @@ import { EventsThumbnailComponent } from './components/events/events-thumbnail/e
 
 /* Services */
 import { EventsDataService } from './services/events-data.service';
+import { TestLoggerComponent } from './components/events/test-logger/test-logger.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { EventsDataService } from './services/events-data.service';
 		TechEventsApp,
 		
 		EventsListComponent,
-		EventsThumbnailComponent
+		EventsThumbnailComponent,
+		TestLoggerComponent
 	],
 	providers: [EventsDataService],
   bootstrap: [TechEventsApp]

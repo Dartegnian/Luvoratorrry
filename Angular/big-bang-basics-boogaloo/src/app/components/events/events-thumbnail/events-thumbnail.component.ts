@@ -7,7 +7,10 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 export class EventsThumbnailComponent {
 	@Input() techEvents: any;
+
 	@Output() buttonClick = new EventEmitter();
+	@Output() streamData = new EventEmitter();
+
 	eventsBookingDetails: any;
 	famousLine = "It's everyday bro! x2";
 
@@ -20,6 +23,11 @@ export class EventsThumbnailComponent {
 		}
 		this.buttonClick.emit(this.eventsBookingDetails);
 		this.techEvents.booked ? console.log("Booking confirmed!") : console.log("No booking");
+	}
+
+	StreamHandler() {
+		console.log("Handling stream...");
+		this.streamData.emit("Waddup");
 	}
 	
 	logData() {

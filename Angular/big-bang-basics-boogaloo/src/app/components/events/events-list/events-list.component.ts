@@ -15,6 +15,10 @@ export class EventsListComponent implements OnInit {
 		this.techEvent1 = this.eventsDataService.getEventsData();
 	}
 
+	ChildLogger(e) {
+		console.log(e);
+	}
+
 	ButtonClickHandler(eventInfo) {
 		this.techEvent1.booked = true;
 		console.log("One booking for: " + eventInfo.name + " on " + eventInfo.date + "!");
