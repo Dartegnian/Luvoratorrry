@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-test-logger',
+  selector: '.app-test-logger',
   templateUrl: './test-logger.component.html',
   styleUrls: ['./test-logger.component.scss']
 })
