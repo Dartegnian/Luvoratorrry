@@ -3,6 +3,6 @@ void main() {
   print(toPrint);
 }
 
-String printHelloWorld(String withExtraWord) {
-  return "Hello world and hello ${withExtraWord}";
+String printHelloWorld(String extraWords) {
+  return "Hello world and hello $extraWords";
 }
