@@ -1,33 +1,36 @@
 <template>
-  <div class="vocaloids">
-    <h1 class="vocaloids__title">Vocaloids</h1>
-
+  <main class="vocaloids">
     <section class="vocaloids__grid">
-			<VocaloidInformation
-      v-bind:key="vocaloid.id"
-      v-for="vocaloid in vocaloids"
-      v-bind:vocaloid="vocaloid"
-    />
-		</section>
-  </div>
+      <DisplayVocaloid
+        v-bind:key="vocaloid.id"
+        v-for="vocaloid in vocaloids"
+        v-bind:vocaloid="vocaloid"
+        v-on:delete-vocaloid="$emit('del-vocaloid', vocaloid.id)"
+      />
+    </section>
+  </main>
 </template>
 
 <script>
-import VocaloidInformation from "./VocaloidInformation";
+import DisplayVocaloid from "./DisplayVocaloid";
 
 export default {
   name: "DisplayVocaloids",
   components: {
-    VocaloidInformation
+    DisplayVocaloid
   },
   props: ["vocaloids"]
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.vocaloids {
+	background-color: #f6f6f6;
+  flex-grow: 1;
+}
 .vocaloids__grid {
-	display: grid;
-	grid-gap: 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
 }
 </style>
