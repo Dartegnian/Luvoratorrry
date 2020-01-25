@@ -1,16 +1,17 @@
 <template>
   <div id="vuecaloids">
-    <header class="vuecaloids__header">
-      <h1 class="vocaloids__title">Vocaloids in Vue</h1>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </header>
+    <Header />
     <router-view />
   </div>
 </template>
 
 <script>
-export default {};
+import Header from "@/components/layout/Header";
+export default {
+  components: {
+    Header
+  }
+};
 </script>
 
 <style lang="scss">
