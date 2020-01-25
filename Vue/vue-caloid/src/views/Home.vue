@@ -19,44 +19,44 @@ export default {
         {
           id: 1,
           name: "Hatsune Miku",
-					isPerforming: true,
-					profilePicture: "miku_profile.png",
-					profileBanner: "miku_banner.jpg"
+          isPerforming: true,
+          profilePicture: "miku_profile.png",
+          profileBanner: "miku_banner.jpg"
         },
         {
           id: 2,
           name: "Kagamine Rin",
           isPerforming: false,
-					profilePicture: "rin_profile.png",
-					profileBanner: "rin_banner.jpg"
+          profilePicture: "rin_profile.png",
+          profileBanner: "rin_banner.jpg"
         },
         {
           id: 3,
           name: "Kagamine Len",
           isPerforming: false,
-					profilePicture: "len_profile.jpg",
-					profileBanner: "len_banner.png"
+          profilePicture: "len_profile.jpg",
+          profileBanner: "len_banner.png"
         },
         {
           id: 4,
           name: "Megurine Luka",
           isPerforming: true,
-					profilePicture: "luka_profile.png",
-					profileBanner: "luka_banner.jpg"
+          profilePicture: "luka_profile.png",
+          profileBanner: "luka_banner.jpg"
         },
         {
           id: 5,
           name: "IA",
           isPerforming: true,
-					profilePicture: "ia_profile.jpg",
-					profileBanner: "ia_banner.jpg"
+          profilePicture: "ia_profile.jpg",
+          profileBanner: "ia_banner.jpg"
         },
         {
           id: 6,
           name: "Gumi",
           isPerforming: false,
-					profilePicture: "gumi_profile.png",
-					profileBanner: "gumi_banner.gif"
+          profilePicture: "gumi_profile.png",
+          profileBanner: "gumi_banner.gif"
         }
       ]
     };

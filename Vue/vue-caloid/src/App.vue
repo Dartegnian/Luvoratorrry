@@ -1,6 +1,6 @@
 <template>
   <div id="vuecaloids">
-		<Header/>
+    <Header />
     <router-view />
   </div>
 </template>
@@ -8,10 +8,10 @@
 <script>
 import Header from "@/components/layout/Header";
 export default {
-	components: {
-		Header
-	}
-}
+  components: {
+    Header
+  }
+};
 </script>
 
 <style lang="scss">

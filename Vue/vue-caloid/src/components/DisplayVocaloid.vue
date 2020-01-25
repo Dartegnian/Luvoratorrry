@@ -3,36 +3,40 @@
     class="vocaloid"
     v-bind:class="{ 'vocaloid--is-performing': vocaloid.isPerforming }"
   >
-		<CardHeader
-		 v-bind:name="vocaloid.name"
-		 v-bind:picture="vocaloid.profilePicture"
-		 v-bind:banner="vocaloid.profileBanner"
-		/>
+    <CardHeader
+      v-bind:name="vocaloid.name"
+      v-bind:picture="vocaloid.profilePicture"
+      v-bind:banner="vocaloid.profileBanner"
+    />
 
-    <div v-if="!vocaloid.isPerforming">
-      <button
-        class="vocaloid__action vocaloid__action--perform"
-        @click="setPerforming"
-      >
-        Set to perform on stage!
-      </button>
-    </div>
-    <div v-else>
+    <div v-if="vocaloid.isPerforming">
       <p>Vocaloid {{ vocaloid.name }} is performing!</p>
+    </div>
+
+    <section class="vocaloid__actions">
       <button
+        v-if="vocaloid.isPerforming"
         class="vocaloid__action vocaloid__action--return"
         @click="setPerforming"
       >
         Return to backstage
       </button>
-    </div>
 
-    <button
-      class="vocaloid__action vocaloid__action--delete"
-      @click="$emit('delete-vocaloid', vocaloid.id)"
-    >
-      Delete Vocaloid
-    </button>
+      <button
+        v-else
+        class="vocaloid__action vocaloid__action--perform"
+        @click="setPerforming"
+      >
+        Set to perform on stage!
+      </button>
+
+      <button
+        class="vocaloid__action vocaloid__action--delete"
+        @click="$emit('delete-vocaloid', vocaloid.id)"
+      >
+        Delete Vocaloid
+      </button>
+    </section>
   </article>
 </template>
 
@@ -41,9 +45,9 @@ import CardHeader from "./layout/vocaloid-card/CardHeader";
 
 export default {
   name: "DisplayVocaloid",
-	components: {
-		CardHeader
-	},
+  components: {
+    CardHeader
+  },
   props: {
     vocaloid: Object
   },
@@ -57,8 +61,11 @@ export default {
 
 <style lang="scss" scoped>
 .vocaloid {
+  display: flex;
+  flex-direction: column;
+  min-height: 30rem;
   padding: 2rem 0rem;
-	padding-top: 0rem;
+  padding-top: 0rem;
   background-color: #fbfbfb;
   color: #000000;
   margin: 1rem 0rem;
@@ -70,6 +77,12 @@ export default {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+.vocaloid__actions {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+}
+
 .vocaloid__action {
   color: white;
   max-width: 8rem;
@@ -77,8 +90,7 @@ export default {
   padding: 0.5rem;
   border-radius: 0.3rem;
   border: none;
-  margin-top: 2rem;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   &:focus {
     outline: none;

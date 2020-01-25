@@ -1,6 +1,6 @@
 <template>
   <main class="vuecaloids__home">
-		<AddVocaloid />
+    <AddVocaloid />
     <section class="home__performers">
       <h2 class="home__title">
         Performing Vocaloids
@@ -24,7 +24,7 @@ import DisplayVocaloid from "./DisplayVocaloid";
 export default {
   name: "DisplayVocaloids",
   components: {
-		AddVocaloid,
+    AddVocaloid,
     DisplayVocaloid
   },
   props: ["vocaloids"]
@@ -42,11 +42,11 @@ export default {
 .home__performers {
   display: flex;
   flex-direction: column;
-	padding: 1rem;
+  padding: 1rem;
 }
 
 .home__title {
-	align-self: baseline;
+  align-self: baseline;
 }
 
 .home__vocaloids-grid {
