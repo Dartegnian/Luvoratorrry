@@ -1,5 +1,6 @@
 <template>
   <main class="vuecaloids__home">
+		<AddVocaloid />
     <section class="home__performers">
       <h2 class="home__title">
         Performing Vocaloids
@@ -17,11 +18,13 @@
 </template>
 
 <script>
+import AddVocaloid from "./AddVocaloid";
 import DisplayVocaloid from "./DisplayVocaloid";
 
 export default {
   name: "DisplayVocaloids",
   components: {
+		AddVocaloid,
     DisplayVocaloid
   },
   props: ["vocaloids"]
