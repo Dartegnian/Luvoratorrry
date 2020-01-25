@@ -3,7 +3,11 @@
     class="vocaloid"
     v-bind:class="{ 'vocaloid--is-performing': vocaloid.isPerforming }"
   >
-		<CardHeader v-bind:name="vocaloid.name" v-bind:picture="vocaloid.profilePicture"/>
+		<CardHeader
+		 v-bind:name="vocaloid.name"
+		 v-bind:picture="vocaloid.profilePicture"
+		 v-bind:banner="vocaloid.profileBanner"
+		/>
 
     <div v-if="!vocaloid.isPerforming">
       <button
@@ -74,6 +78,7 @@ export default {
   border-radius: 0.3rem;
   border: none;
   margin-top: 2rem;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
   &:focus {
     outline: none;
