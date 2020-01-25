@@ -1,13 +1,13 @@
 <template>
   <main class="vocaloids">
     <section class="vocaloids__grid">
-			<DisplayVocaloid
-      v-bind:key="vocaloid.id"
-      v-for="vocaloid in vocaloids"
-      v-bind:vocaloid="vocaloid"
-			v-on:delete-vocaloid="$emit('del-vocaloid', vocaloid.id)"
-    />
-		</section>
+      <DisplayVocaloid
+        v-bind:key="vocaloid.id"
+        v-for="vocaloid in vocaloids"
+        v-bind:vocaloid="vocaloid"
+        v-on:delete-vocaloid="$emit('del-vocaloid', vocaloid.id)"
+      />
+    </section>
   </main>
 </template>
 
@@ -25,8 +25,8 @@ export default {
 
 <style scoped>
 .vocaloids__grid {
-	display: grid;
-	grid-gap: 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
 }
 </style>

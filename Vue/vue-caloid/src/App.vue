@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header id="nav">
-    	<h1 class="vocaloids__title">Vocaloids</h1>
+      <h1 class="vocaloids__title">Vocaloids</h1>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </header>
