@@ -23,7 +23,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.vocaloids {
+	background-color: #f6f6f6;
+}
 .vocaloids__grid {
   display: grid;
   grid-gap: 2rem;

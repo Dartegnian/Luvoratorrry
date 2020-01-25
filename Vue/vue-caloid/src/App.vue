@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <header id="nav">
+  <div id="vuecaloids">
+    <header class="vuecaloids__header">
       <h1 class="vocaloids__title">Vocaloids</h1>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -10,7 +10,7 @@
 </template>
 
 <style lang="scss">
-#app {
+#vuecaloids {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,7 +18,7 @@
   color: #2c3e50;
 }
 
-#nav {
+.vuecaloids__header {
   padding: 30px;
 
   a {
@@ -29,5 +29,9 @@
       color: #42b983;
     }
   }
+}
+
+.vocaloids__title {
+	margin-top: 0;
 }
 </style>

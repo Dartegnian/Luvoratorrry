@@ -67,10 +67,10 @@ export default {
   border-radius: 0.3rem;
   border: none;
   margin-top: 2rem;
-}
 
-.vocaloid__action:focus {
-  outline: none;
+	&:focus {
+  	outline: none;
+	}
 }
 
 .vocaloid__action--perform {
