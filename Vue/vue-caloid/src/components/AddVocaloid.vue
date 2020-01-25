@@ -1,7 +1,7 @@
 <template>
   <section class="add-vocaloid">
     <h2 class="add-vocaloid__title">
-      Add Vocaloid into Vue
+      Add a Vocaloid into Vue
     </h2>
     <form class="add-vocaloid__form">
       <input
