@@ -7,6 +7,7 @@
       v-bind:key="vocaloid.id"
       v-for="vocaloid in vocaloids"
       v-bind:vocaloid="vocaloid"
+			v-on:delete-vocaloid="$emit('del-vocaloid', vocaloid.id)"
     />
 		</section>
   </div>

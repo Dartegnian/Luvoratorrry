@@ -5,18 +5,22 @@
 	>
 		{{ vocaloid.name }}
 		<div v-if="!vocaloid.isPerforming">
-			<button class="vocaloid__action vocaloid__action--perform" v-on:click="setPerforming">
+			<button class="vocaloid__action vocaloid__action--perform" @click="setPerforming">
 				Set to perform on stage!
 			</button>
 		</div>
 		<div v-else>
 			<p>
-				Vocaloid is performing!
+				Vocaloid {{ vocaloid.name }} is performing!
 			</p>
-			<button class="vocaloid__action vocaloid__action--return" v-on:click="setPerforming">
+			<button class="vocaloid__action vocaloid__action--return" @click="setPerforming">
 				Return to backstage
 			</button>
 		</div>
+
+		<button class="vocaloid__action vocaloid__action--delete" @click="$emit('delete-vocaloid', vocaloid.id)">
+			Delete Vocaloid
+		</button>
 	</div>
 </template>
 
@@ -68,6 +72,9 @@ export default {
 
 .vocaloid__action--return {
   background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.vocaloid__action--delete {
+	background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
 }
 
 </style>

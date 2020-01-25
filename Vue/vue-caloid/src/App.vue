@@ -1,6 +1,6 @@
 <template>
   <div id="list-vocaloids">
-		<DisplayVocaloids v-bind:vocaloids="vocaloids"/>
+		<DisplayVocaloids v-bind:vocaloids="vocaloids" v-on:del-vocaloid="deleteVocaloid"/>
   </div>
 </template>
 
@@ -46,6 +46,13 @@ export default {
 					isPerforming: false
 				},
 			]
+		}
+	},
+	methods: {
+		deleteVocaloid(id) {
+			this.vocaloids = this.vocaloids.filter(
+				(vocaloid) => vocaloid.id !== id
+			)
 		}
 	}
 }
