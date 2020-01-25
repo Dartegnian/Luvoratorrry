@@ -1,5 +1,5 @@
 <template>
-  <div
+  <article
     class="vocaloid"
     v-bind:class="{ 'vocaloid--is-performing': vocaloid.isPerforming }"
   >
@@ -28,7 +28,7 @@
     >
       Delete Vocaloid
     </button>
-  </div>
+  </article>
 </template>
 
 <script>
