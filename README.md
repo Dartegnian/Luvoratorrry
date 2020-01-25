@@ -10,5 +10,8 @@ Stuff made in Angular 2, 4, 4<sup>2</sup> or whatever comes after. Actually, no,
 ### React
 Things built on the React JavaScript library. Nothing mind-blowing here, just slight deviations from the generic `create-react-app` boilerplate.
 
+### Vue
+Ah yes, the Vue library, how exciting. Not much to say here.
+
 ### Dart
 Wow, a programming language named after me. How inspiring! I haven't learned another programming language in a while (aside from TypeScript), so I might as well give Dart a Go (but not Go, maybe soon).
