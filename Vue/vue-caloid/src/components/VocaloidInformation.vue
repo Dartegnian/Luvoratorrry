@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .vocaloid {
 	padding: 2rem 0rem;
 	background-color: #fbfbfb;
