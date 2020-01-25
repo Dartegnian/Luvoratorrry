@@ -3,7 +3,8 @@
     class="vocaloid"
     v-bind:class="{ 'vocaloid--is-performing': vocaloid.isPerforming }"
   >
-    {{ vocaloid.name }}
+		<CardHeader v-bind:name="vocaloid.name" v-bind:picture="vocaloid.profilePicture"/>
+
     <div v-if="!vocaloid.isPerforming">
       <button
         class="vocaloid__action vocaloid__action--perform"
@@ -32,8 +33,13 @@
 </template>
 
 <script>
+import CardHeader from "./layout/vocaloid-card/CardHeader";
+
 export default {
   name: "DisplayVocaloid",
+	components: {
+		CardHeader
+	},
   props: {
     vocaloid: Object
   },
@@ -48,6 +54,7 @@ export default {
 <style lang="scss" scoped>
 .vocaloid {
   padding: 2rem 0rem;
+	padding-top: 0rem;
   background-color: #fbfbfb;
   color: #000000;
   margin: 1rem 0rem;
