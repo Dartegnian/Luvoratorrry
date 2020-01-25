@@ -1,4 +1,4 @@
-# vue-basics
+# Vue-caloid app
 
 ## Project setup
 ```
