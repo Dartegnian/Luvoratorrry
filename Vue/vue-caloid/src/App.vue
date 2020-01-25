@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <header id="nav">
+    	<h1 class="vocaloids__title">Vocaloids</h1>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </header>
     <router-view />
   </div>
 </template>

@@ -1,7 +1,5 @@
 <template>
-  <div id="list-vocaloids">
-		<DisplayVocaloids v-bind:vocaloids="vocaloids" v-on:del-vocaloid="deleteVocaloid"/>
-  </div>
+	<DisplayVocaloids v-bind:vocaloids="vocaloids" v-on:del-vocaloid="deleteVocaloid"/>
 </template>
 
 <script>

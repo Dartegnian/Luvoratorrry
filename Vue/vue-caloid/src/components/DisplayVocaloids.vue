@@ -1,25 +1,23 @@
 <template>
-  <div class="vocaloids">
-    <h1 class="vocaloids__title">Vocaloids</h1>
-
+  <main class="vocaloids">
     <section class="vocaloids__grid">
-			<VocaloidInformation
+			<DisplayVocaloid
       v-bind:key="vocaloid.id"
       v-for="vocaloid in vocaloids"
       v-bind:vocaloid="vocaloid"
 			v-on:delete-vocaloid="$emit('del-vocaloid', vocaloid.id)"
     />
 		</section>
-  </div>
+  </main>
 </template>
 
 <script>
-import VocaloidInformation from "./VocaloidInformation";
+import DisplayVocaloid from "./DisplayVocaloid";
 
 export default {
   name: "DisplayVocaloids",
   components: {
-    VocaloidInformation
+    DisplayVocaloid
   },
   props: ["vocaloids"]
 };

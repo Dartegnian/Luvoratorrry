@@ -26,7 +26,7 @@
 
 <script>
 export default {
-	name: "VocaloidInformation",
+	name: "DisplayVocaloid",
 	props: {
 		vocaloid: Object
 	},
