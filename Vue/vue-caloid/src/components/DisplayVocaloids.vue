@@ -26,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 .vocaloids {
 	background-color: #f6f6f6;
+  flex-grow: 1;
 }
 .vocaloids__grid {
   display: grid;

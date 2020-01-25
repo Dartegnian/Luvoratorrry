@@ -68,9 +68,9 @@ export default {
   border: none;
   margin-top: 2rem;
 
-	&:focus {
-  	outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 }
 
 .vocaloid__action--perform {
