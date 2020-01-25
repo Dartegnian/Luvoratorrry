@@ -1,23 +1,58 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="list-vocaloids">
+		<DisplayVocaloids v-bind:vocaloids="vocaloids"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DisplayVocaloids from "./components/DisplayVocaloids";
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+	name: 'list-vocaloids',
+	components: {
+		DisplayVocaloids
+	},
+	data() {
+		return {
+			vocaloids: [
+				{
+					id: 1,
+					name: "Hatsune Miku",
+					isPerforming: true
+				},
+				{
+					id: 2,
+					name: "Kagamine Rin",
+					isPerforming: false
+				},
+				{
+					id: 3,
+					name: "Kagamine Len",
+					isPerforming: false
+				},
+				{
+					id: 4,
+					name: "Megurine Luka",
+					isPerforming: true
+				},
+				{
+					id: 5,
+					name: "IA",
+					isPerforming: true
+				},
+				{
+					id: 6,
+					name: "Gumi",
+					isPerforming: false
+				},
+			]
+		}
+	}
 }
 </script>
 
 <style>
-#app {
+#list-vocaloids {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
