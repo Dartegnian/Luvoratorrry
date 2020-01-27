@@ -31,9 +31,13 @@ export default {
   methods: {
     getPicture(src, type) {
       let image = "";
-      type === "profile"
-        ? (image = require.context("@/assets/images/profile-pictures/", false))
-        : (image = require.context("@/assets/images/profile-banners/", false));
+
+      if (type === "profile") {
+        image = require.context("@/assets/images/profile-pictures/", false);
+      } else if (type === "banner") {
+        image = require.context("@/assets/images/profile-banners/", false);
+      }
+
       return image("./" + src);
     }
   }

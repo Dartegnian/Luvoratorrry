@@ -2,6 +2,7 @@
   <DisplayVocaloids
     v-bind:vocaloids="vocaloids"
     v-on:del-vocaloid="deleteVocaloid"
+    v-on:add-vocaloid="addVocaloidIntoDb($event)"
   />
 </template>
 
@@ -64,6 +65,9 @@ export default {
   methods: {
     deleteVocaloid(id) {
       this.vocaloids = this.vocaloids.filter(vocaloid => vocaloid.id !== id);
+    },
+    addVocaloidIntoDb(newVocaloid) {
+      this.vocaloids = [...this.vocaloids, newVocaloid];
     }
   }
 };
