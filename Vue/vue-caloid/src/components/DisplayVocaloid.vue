@@ -1,21 +1,21 @@
 <template>
   <article
     class="vocaloid"
-    v-bind:class="{ 'vocaloid--is-performing': vocaloid.isPerforming }"
+    v-bind:class="{ 'vocaloid--is-performing': vocaloid.completed }"
   >
     <CardHeader
-      v-bind:name="vocaloid.name"
+      v-bind:name="vocaloid.title"
       v-bind:picture="vocaloid.profilePicture"
       v-bind:banner="vocaloid.profileBanner"
     />
 
-    <div v-if="vocaloid.isPerforming">
-      <p>Vocaloid {{ vocaloid.name }} is performing!</p>
+    <div v-if="vocaloid.completed">
+      <p>Vocaloid {{ vocaloid.title }} is performing!</p>
     </div>
 
     <section class="vocaloid__actions">
       <button
-        v-if="vocaloid.isPerforming"
+        v-if="vocaloid.completed"
         class="vocaloid__action vocaloid__action--return"
         @click="setPerforming"
       >
@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     setPerforming() {
-      this.vocaloid.isPerforming = !this.vocaloid.isPerforming;
+      this.vocaloid.completed = !this.vocaloid.completed;
     }
   }
 };

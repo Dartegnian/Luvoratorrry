@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import uuid from "uuid";
+// import uuid from "uuid";
 
 export default {
   name: "AddVocaloid",
@@ -31,11 +31,8 @@ export default {
       e.preventDefault();
 
       const newVocaloid = {
-        id: uuid.v4(),
-        name: this.vocaloidName,
-        isPerforming: false,
-        profilePicture: "ia_profile.jpg",
-        profileBanner: "ia_banner.jpg"
+        title: this.vocaloidName,
+        completed: false
       };
 
       this.$emit("add-vocaloid", newVocaloid);

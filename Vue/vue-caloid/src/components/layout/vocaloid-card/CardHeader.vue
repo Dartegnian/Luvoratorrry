@@ -2,16 +2,10 @@
   <section class="card-header">
     <section class="card-header__banner">
       <div class="card-header__profile-background">
-        <img
-          class="card-header__profile-background-image"
-          v-bind:src="getPicture(banner, 'banner')"
-        />
+        <img class="card-header__profile-background-image" />
       </div>
       <div class="card-header__profile-picture">
-        <img
-          class="card-header__profile-picture-image"
-          v-bind:src="getPicture(picture, 'profile')"
-        />
+        <img class="card-header__profile-picture-image" />
       </div>
     </section>
     <h2>
