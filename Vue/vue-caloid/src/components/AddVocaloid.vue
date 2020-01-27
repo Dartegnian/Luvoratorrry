@@ -3,12 +3,13 @@
     <h2 class="add-vocaloid__title">
       Add a Vocaloid into Vue
     </h2>
-    <form class="add-vocaloid__form">
+    <form class="add-vocaloid__form" @submit="addVocaloid">
       <input
         class="add-vocaloid__input"
         type="text"
-        name="addVocaloid"
+        name="New User Vocaloid"
         placeholder="Type Vocaloid name here"
+        v-model="vocaloidName"
       />
       <input class="add-vocaloid__submit" type="submit" value="+" />
     </form>
@@ -16,8 +17,28 @@
 </template>
 
 <script>
+// import uuid from "uuid";
+
 export default {
-  name: "AddVocaloid"
+  name: "AddVocaloid",
+  data() {
+    return {
+      vocaloidName: ""
+    };
+  },
+  methods: {
+    addVocaloid(e) {
+      e.preventDefault();
+
+      const newVocaloid = {
+        title: this.vocaloidName,
+        completed: false
+      };
+
+      this.$emit("add-vocaloid", newVocaloid);
+      this.vocaloidName = "";
+    }
+  }
 };
 </script>
 

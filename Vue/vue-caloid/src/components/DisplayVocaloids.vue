@@ -1,6 +1,6 @@
 <template>
   <main class="vuecaloids__home">
-    <AddVocaloid />
+    <AddVocaloid v-on:add-vocaloid="$emit('add-vocaloid', $event)" />
     <section class="home__performers">
       <h2 class="home__title">
         Performing Vocaloids
