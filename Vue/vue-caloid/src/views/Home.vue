@@ -28,11 +28,12 @@ export default {
   },
   methods: {
     deleteVocaloid(id) {
-			console.log(id);
       axios
         .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
         .then(res => {
-          this.vocaloids = this.vocaloids.filter(vocaloid => vocaloid.id !== id);
+          this.vocaloids = this.vocaloids.filter(
+            vocaloid => vocaloid.id !== id
+          );
           console.log(res);
         })
         .catch(err => console.error(err));
