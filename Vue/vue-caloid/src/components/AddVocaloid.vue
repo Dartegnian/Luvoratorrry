@@ -38,8 +38,8 @@ export default {
         profileBanner: "ia_banner.jpg"
       };
 
-			this.$emit("add-vocaloid", newVocaloid);
-			this.vocaloidName = "";
+      this.$emit("add-vocaloid", newVocaloid);
+      this.vocaloidName = "";
     }
   }
 };
