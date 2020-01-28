@@ -2,7 +2,13 @@
 	<div>
 		<h3>Todos</h3>
 		<div class="todos">
-			<article v-for="todo in allTodos" :key="todo.id" class="todo">
+			<article
+				@dblclick="updateTodo(todo)"
+				v-for="todo in allTodos"
+				:key="todo.id"
+				class="todo"
+				:class="{ 'is-complete': todo.completed }"
+			>
 				<div>{{ todo.title }}</div>
 				<i @click="deleteTodo(todo.id)" class="fas fa-trash-alt"></i>
 			</article>
@@ -19,7 +25,8 @@ export default {
 	methods: {
 		...mapActions([
 			"fetchTodos",
-			"deleteTodo"
+			"deleteTodo",
+			"updateTodo"
 		]),
 	},
 	created() {
